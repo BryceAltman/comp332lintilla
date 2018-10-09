@@ -1,0 +1,40 @@
+Program tree:
+-------------
+
+Program(
+    Vector(
+        FnDecl(
+            IdnDef("fibonacci"),
+            Vector(ParamDecl(IdnDef("n"), IntType())),
+            Some(IntType()),
+            Block(
+                Vector(
+                    IfExp(
+                        LessExp(IdnExp(IdnUse("n")), IntExp(0)),
+                        Block(Vector(Return(Some(NegExp(IntExp(1)))))),
+                        Block(Vector())),
+                    LetMutDecl(IdnDef("res1"), IntExp(0)),
+                    LetMutDecl(IdnDef("res2"), IntExp(1)),
+                    LetMutDecl(IdnDef("count"), IdnExp(IdnUse("n"))),
+                    WhileExp(
+                        LessExp(IntExp(0), IdnExp(IdnUse("count"))),
+                        Block(
+                            Vector(
+                                LetDecl(
+                                    IdnDef("temp"),
+                                    IdnExp(IdnUse("res1"))),
+                                AssignExp(
+                                    IdnUse("res1"),
+                                    IdnExp(IdnUse("res2"))),
+                                AssignExp(
+                                    IdnUse("res2"),
+                                    PlusExp(
+                                        IdnExp(IdnUse("temp")),
+                                        IdnExp(IdnUse("res1")))),
+                                AssignExp(
+                                    IdnUse("count"),
+                                    MinusExp(
+                                        IdnExp(IdnUse("count")),
+                                        IntExp(1)))))),
+                    IdnExp(IdnUse("res1"))))),
+        AppExp(IdnExp(IdnUse("fibonacci")), Vector(IntExp(5)))))

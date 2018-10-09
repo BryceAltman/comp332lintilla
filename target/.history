@@ -1,0 +1,56 @@
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+clear
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/basic.lin
+run src/test/resources/factorial.lin
+run src/test/resources/tests.lin
+run src/test/resources/factorial.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/tests.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/tests.lin
+run src/test/resources/basic.lin
+run src/test/resources/tests.lin
+run src/test/resources/basic.lin
+run src/test/resources/tests.lin
+run src/test/resources/basic.lin
+run src/test/resources/tests.lin
+run src/test/resources/basic.lin
+run src/test/resources/tests.lin
+run src/test/resources/basic.lin
+run src/test/resources/fibonacci.lin
+run src/test/resources/factorial.lin
+run src/test/resources/loopfact.lin
+run src/test/resources/loop_fact.lin
+test
+run src/test/resources/basic.lin
+test
+run src/test/resources/basic.lin
+test
+run src/test/resources/basic.lin
+run src/test/resources/tests.lin
+test
+run src/test/resources/basic.lin
+test

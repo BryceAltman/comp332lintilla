@@ -1,0 +1,80 @@
+//
+// This file is part of COMP332 Assignment 2 2018.
+//
+// Lintilla, a simple functional programming language.
+//
+// © 2018, Dominic Verity and Anthony Sloane, Macquarie University.
+//         All rights reserved.
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+//
+// Some test expressions written in Lintilla
+//
+
+42;
+
+3 + 4;
+
+2 * (12 / 4);
+
+if x < 0 { 1 } else { 2 };
+
+if x = y {
+  if true { 3 } else { 4 }
+} else {
+  5
+};
+
+1 + (if x < 10 { 10 } else { x });
+
+{
+  fn double(x : int) -> int {
+    x * 2
+  };
+  double(4)
+};
+
+{
+  let mut x = 10;
+  while (0 < x) {
+    if x - (x / 2) * 2 = 0 {
+      return
+    } else {
+      x := 2 * x - 1
+    };
+    x := (x + 1) / 2
+  }
+};
+
+{ let x = 5; x + x } * { let y = 10; y / 4 };
+
+fn uncurried(x : int, y : bool) -> int {
+  if y { x } else { x * 2 }
+};
+
+fn curried (x : int) -> fn(bool) -> int {
+  fn curried1(y : bool) -> int {
+    if y { x } else { x * 2 }
+  };
+  curried1
+};
+
+fn curry(f : fn (int, bool) -> int) -> (fn(int) -> (fn(bool) -> int)) {
+  fn curry1 (x : int) -> fn(bool) -> int {
+    fn curry2 (y : bool) -> int {
+      f(x,y)
+    };
+    curry2
+  };
+  curry1
+};
+
+fn uncurry(f : fn(int) -> (fn(bool) -> int)) -> (fn(int, bool) -> int) {
+  fn uncurry1(x : int, y : bool) -> int {
+    f(x)(y) 
+  };
+  uncurry1
+}
+

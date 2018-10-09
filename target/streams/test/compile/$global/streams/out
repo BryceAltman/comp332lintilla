@@ -1,0 +1,5 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/bryce/comp332-lintilla/src/test/scala/SyntaxAnalysisTests.scala:111:69: not enough arguments for method apply: (cond: lintilla.LintillaTree.Expression, body: lintilla.LintillaTree.Expression)lintilla.LintillaTree.WhileExp in object WhileExp.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameters cond, body.[0m
+[0m[[0m[31merror[0m] [0m[0m    exp("while n < 0 { n + 1 }") should parseTo[Expression](WhileExp())[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

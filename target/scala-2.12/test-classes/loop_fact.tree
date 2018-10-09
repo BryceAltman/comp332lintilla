@@ -1,0 +1,26 @@
+Program tree:
+-------------
+
+Program(
+    Vector(
+        FnDecl(
+            IdnDef("fact"),
+            Vector(ParamDecl(IdnDef("n"), IntType())),
+            Some(IntType()),
+            Block(
+                Vector(
+                    LetMutDecl(IdnDef("result"), IntExp(1)),
+                    LetMutDecl(IdnDef("count"), IntExp(1)),
+                    WhileExp(
+                        LessExp(
+                            IdnExp(IdnUse("count")),
+                            PlusExp(IdnExp(IdnUse("n")), IntExp(1))),
+                        Block(
+                            Vector(
+                                AssignExp(
+                                    IdnUse("result"),
+                                    StarExp(
+                                        IdnExp(IdnUse("count")),
+                                        IdnExp(IdnUse("result"))))))),
+                    IdnExp(IdnUse("result"))))),
+        AppExp(IdnExp(IdnUse("fact")), Vector(IntExp(5)))))

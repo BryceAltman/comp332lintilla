@@ -1,0 +1,27 @@
+//
+// This file is part of COMP332 Assignment 2 2018.
+//
+// Lintilla, a simple functional programming language.
+//
+// © 2018, Dominic Verity and Anthony Sloane, Macquarie University.
+//         All rights reserved.
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+//
+// A simple, imperative style, factorial function written in Lintilla.
+//
+
+fn fact(n: int) -> int {
+  let mut result = 1;
+  let mut count = 1;
+
+  while (count < n + 1) {
+    result := count * result
+  };
+
+  result
+};
+
+fact(5)

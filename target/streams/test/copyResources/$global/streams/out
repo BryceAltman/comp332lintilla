@@ -1,0 +1,10 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/tests.lin,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/tests.lin)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/fibonacci.tree,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/fibonacci.tree)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/loop_fact.lin,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/loop_fact.lin)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/loop_fact.tree,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/loop_fact.tree)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/factorial.lin,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/factorial.lin)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/tests.tree,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/tests.tree)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/basic.lin,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/basic.lin)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/fibonacci.lin,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/fibonacci.lin)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/bryce/comp332-lintilla/src/test/resources/factorial.tree,/Users/bryce/comp332-lintilla/target/scala-2.12/test-classes/factorial.tree)[0m

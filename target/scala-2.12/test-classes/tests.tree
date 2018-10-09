@@ -1,0 +1,167 @@
+Program tree:
+-------------
+
+Program(
+    Vector(
+        IntExp(42),
+        PlusExp(IntExp(3), IntExp(4)),
+        StarExp(IntExp(2), SlashExp(IntExp(12), IntExp(4))),
+        IfExp(
+            LessExp(IdnExp(IdnUse("x")), IntExp(0)),
+            Block(Vector(IntExp(1))),
+            Block(Vector(IntExp(2)))),
+        IfExp(
+            EqualExp(IdnExp(IdnUse("x")), IdnExp(IdnUse("y"))),
+            Block(
+                Vector(
+                    IfExp(
+                        BoolExp(true),
+                        Block(Vector(IntExp(3))),
+                        Block(Vector(IntExp(4)))))),
+            Block(Vector(IntExp(5)))),
+        PlusExp(
+            IntExp(1),
+            IfExp(
+                LessExp(IdnExp(IdnUse("x")), IntExp(10)),
+                Block(Vector(IntExp(10))),
+                Block(Vector(IdnExp(IdnUse("x")))))),
+        Block(
+            Vector(
+                FnDecl(
+                    IdnDef("double"),
+                    Vector(ParamDecl(IdnDef("x"), IntType())),
+                    Some(IntType()),
+                    Block(Vector(StarExp(IdnExp(IdnUse("x")), IntExp(2))))),
+                AppExp(IdnExp(IdnUse("double")), Vector(IntExp(4))))),
+        Block(
+            Vector(
+                LetMutDecl(IdnDef("x"), IntExp(10)),
+                WhileExp(
+                    LessExp(IntExp(0), IdnExp(IdnUse("x"))),
+                    Block(
+                        Vector(
+                            IfExp(
+                                EqualExp(
+                                    MinusExp(
+                                        IdnExp(IdnUse("x")),
+                                        StarExp(
+                                            SlashExp(
+                                                IdnExp(IdnUse("x")),
+                                                IntExp(2)),
+                                            IntExp(2))),
+                                    IntExp(0)),
+                                Block(Vector(Return(None))),
+                                Block(
+                                    Vector(
+                                        AssignExp(
+                                            IdnUse("x"),
+                                            MinusExp(
+                                                StarExp(
+                                                    IntExp(2),
+                                                    IdnExp(IdnUse("x"))),
+                                                IntExp(1)))))),
+                            AssignExp(
+                                IdnUse("x"),
+                                SlashExp(
+                                    PlusExp(IdnExp(IdnUse("x")), IntExp(1)),
+                                    IntExp(2)))))))),
+        StarExp(
+            Block(
+                Vector(
+                    LetDecl(IdnDef("x"), IntExp(5)),
+                    PlusExp(IdnExp(IdnUse("x")), IdnExp(IdnUse("x"))))),
+            Block(
+                Vector(
+                    LetDecl(IdnDef("y"), IntExp(10)),
+                    SlashExp(IdnExp(IdnUse("y")), IntExp(4))))),
+        FnDecl(
+            IdnDef("uncurried"),
+            Vector(
+                ParamDecl(IdnDef("x"), IntType()),
+                ParamDecl(IdnDef("y"), BoolType())),
+            Some(IntType()),
+            Block(
+                Vector(
+                    IfExp(
+                        IdnExp(IdnUse("y")),
+                        Block(Vector(IdnExp(IdnUse("x")))),
+                        Block(
+                            Vector(StarExp(IdnExp(IdnUse("x")), IntExp(2)))))))),
+        FnDecl(
+            IdnDef("curried"),
+            Vector(ParamDecl(IdnDef("x"), IntType())),
+            Some(FnType(Vector(BoolType()), IntType())),
+            Block(
+                Vector(
+                    FnDecl(
+                        IdnDef("curried1"),
+                        Vector(ParamDecl(IdnDef("y"), BoolType())),
+                        Some(IntType()),
+                        Block(
+                            Vector(
+                                IfExp(
+                                    IdnExp(IdnUse("y")),
+                                    Block(Vector(IdnExp(IdnUse("x")))),
+                                    Block(
+                                        Vector(
+                                            StarExp(
+                                                IdnExp(IdnUse("x")),
+                                                IntExp(2)))))))),
+                    IdnExp(IdnUse("curried1"))))),
+        FnDecl(
+            IdnDef("curry"),
+            Vector(
+                ParamDecl(
+                    IdnDef("f"),
+                    FnType(Vector(IntType(), BoolType()), IntType()))),
+            Some(
+                FnType(
+                    Vector(IntType()),
+                    FnType(Vector(BoolType()), IntType()))),
+            Block(
+                Vector(
+                    FnDecl(
+                        IdnDef("curry1"),
+                        Vector(ParamDecl(IdnDef("x"), IntType())),
+                        Some(FnType(Vector(BoolType()), IntType())),
+                        Block(
+                            Vector(
+                                FnDecl(
+                                    IdnDef("curry2"),
+                                    Vector(
+                                        ParamDecl(IdnDef("y"), BoolType())),
+                                    Some(IntType()),
+                                    Block(
+                                        Vector(
+                                            AppExp(
+                                                IdnExp(IdnUse("f")),
+                                                Vector(
+                                                    IdnExp(IdnUse("x")),
+                                                    IdnExp(IdnUse("y"))))))),
+                                IdnExp(IdnUse("curry2"))))),
+                    IdnExp(IdnUse("curry1"))))),
+        FnDecl(
+            IdnDef("uncurry"),
+            Vector(
+                ParamDecl(
+                    IdnDef("f"),
+                    FnType(
+                        Vector(IntType()),
+                        FnType(Vector(BoolType()), IntType())))),
+            Some(FnType(Vector(IntType(), BoolType()), IntType())),
+            Block(
+                Vector(
+                    FnDecl(
+                        IdnDef("uncurry1"),
+                        Vector(
+                            ParamDecl(IdnDef("x"), IntType()),
+                            ParamDecl(IdnDef("y"), BoolType())),
+                        Some(IntType()),
+                        Block(
+                            Vector(
+                                AppExp(
+                                    AppExp(
+                                        IdnExp(IdnUse("f")),
+                                        Vector(IdnExp(IdnUse("x")))),
+                                    Vector(IdnExp(IdnUse("y"))))))),
+                    IdnExp(IdnUse("uncurry1")))))))

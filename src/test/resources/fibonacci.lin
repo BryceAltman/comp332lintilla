@@ -1,0 +1,33 @@
+//
+// This file is part of COMP332 Assignment 2 2018.
+//
+// Lintilla, a simple functional programming language.
+//
+// © 2018, Dominic Verity and Anthony Sloane, Macquarie University.
+//         All rights reserved.
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+//
+// A simple, imperative style, fibonacci function written in Lintilla.
+//
+
+fn fibonacci(n : int) -> int {
+  if n < 0 { return -1 } else {}; // If `n` is negative return the error value -1.
+  
+  let mut res1 = 0;
+  let mut res2 = 1;
+  let mut count = n;
+  
+  while 0 < count {
+    let temp = res1;
+    res1 := res2;
+    res2 := temp + res1;
+    count := count - 1
+  };
+  
+  res1
+};
+
+fibonacci(5)

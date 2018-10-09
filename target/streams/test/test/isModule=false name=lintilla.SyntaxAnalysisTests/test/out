@@ -1,0 +1,19 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mSyntaxAnalysisTests in extras/src/test/scala/lintilla:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an identifier of one letter produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an identifier as an applied instance produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an identifier containing digits and underscores produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an integer as an identifier gives an error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a non-identifier as an identifier gives an error (digit)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a non-identifier as an identifier gives an error (underscore)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a keyword as an identifier gives an error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a keyword prefix as an identifier produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an integer of one digit as an integer produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an integer as an integer produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a non-integer as an integer gives an error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an assign expression produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing a return expression produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an empty return expression produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an if expression with empty else produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- parsing an if expression with else expression produces the correct tree[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- parsing a while expression produces the correct tree *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Parse succeeded with "WhileExp(LessExp(IdnExp(IdnUse(n)),IntExp(0)),Block(Vector(PlusExp(IdnExp(IdnUse(n)),IntExp(1)))))" instead of expected "WhileExp(LessExp(IdnExp(IdnUse(n)),IntExp(0)),PlusExp(IdnExp(IdnUse(n)),IntExp(1)))" at end of source (1,22) (SyntaxAnalysisTests.scala:111)[0m[0m
